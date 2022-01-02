@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashboardContext" prefHeight="770.0" prefWidth="1270.0" styleClass="Main-pane" stylesheets="@../assets/styles/Background.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <AnchorPane fx:id="mainRoot" layoutY="148.0" prefHeight="622.0" prefWidth="1270.0" style="-fx-border-color: blue;" styleClass="DashBoard-Pane">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="562.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="549.0" layoutY="176.0" text="Sipsewana" textFill="#2f02db" textOverrun="CLIP">
+               <font>
+                  <Font name="Klaudia Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="486.0" layoutY="214.0" text="Vocational Training Institute" textFill="#3e2df8" textOverrun="CLIP">
+               <font>
+                  <Font name="Klaudia Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane layoutX="266.0" layoutY="300.0" prefHeight="200.0" prefWidth="220.0" style="-fx-border-color: blue; -fx-border-radius: 10;">
+               <children>
+                  <Label alignment="CENTER" layoutX="48.0" layoutY="14.0" prefHeight="42.0" prefWidth="124.0" text="Students" underline="true">
+                     <font>
+                        <Font name="Engebrechtre Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblStudentCount" alignment="CENTER" layoutX="7.0" layoutY="56.0" prefHeight="127.0" prefWidth="207.0" text="0" textFill="RED">
+                     <font>
+                        <Font size="82.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="789.0" layoutY="300.0" prefHeight="200.0" prefWidth="220.0" style="-fx-border-color: blue; -fx-border-radius: 10;">
+               <children>
+                  <Label alignment="CENTER" layoutX="48.0" layoutY="14.0" prefHeight="42.0" prefWidth="124.0" text="Courses" underline="true">
+                     <font>
+                        <Font name="Engebrechtre Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCourseCount" alignment="CENTER" layoutX="7.0" layoutY="56.0" prefHeight="127.0" prefWidth="207.0" text="0" textFill="RED">
+                     <font>
+                        <Font size="82.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="150.0" prefWidth="1270.0" style="-fx-border-color: blue;" styleClass="menu-bar">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="91.0" layoutX="67.0" layoutY="14.0" onMouseClicked="#openHomePageOnAction" onMouseEntered="#playAnimationMouseEntered" onMouseExited="#playAnimationMouseExited" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/home.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="67.0" layoutY="107.0" text="Dashboard">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="82.0" fitWidth="91.0" layoutX="250.0" layoutY="14.0" onMouseClicked="#openStudentForm_OnAction" onMouseEntered="#playAnimationMouseEntered" onMouseExited="#playAnimationMouseExited" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/students.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="258.0" layoutY="107.0" text="Students">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="82.0" fitWidth="91.0" layoutX="433.0" layoutY="14.0" onMouseClicked="#openCoursesForm_OnAction" onMouseEntered="#playAnimationMouseEntered" onMouseExited="#playAnimationMouseExited" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/course.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="444.0" layoutY="107.0" text="Courses">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="82.0" fitWidth="91.0" layoutX="799.0" layoutY="18.0" onMouseClicked="#openRegistrationList_OnAction" onMouseEntered="#playAnimationMouseEntered" onMouseExited="#playAnimationMouseExited" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/test.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="778.0" layoutY="107.0" text="Registration List">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="1196.0" layoutY="14.0" onMouseClicked="#logOut_OnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/logout.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="82.0" fitWidth="91.0" layoutX="616.0" layoutY="18.0" onMouseClicked="#openRegistrationForm_OnAction" onMouseEntered="#playAnimationMouseEntered" onMouseExited="#playAnimationMouseExited" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/registration.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="611.0" layoutY="107.0" text="Registration">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,104 @@
+.Main-pane{
+    /*background: #5433FF;  !* fallback for old browsers *!
+    background: -webkit-linear-gradient(to left, #A5FECB, #20BDFF, #5433FF);*/  /* Chrome 10-25, Safari 5.1-6 */
+    -fx-background-color: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.Login-Label{
+    -fx-font-size: 35px;
+    -fx-font-family: Engebrechtre;
+}
+.login-button{
+    -fx-border-color: purple;
+    -fx-border-radius: 100px;
+    -fx-background-color: transparent;
+    -fx-font-size: 20px;
+    -fx-font-weight: Bold;
+    -fx-text-fill: black;
+    -fx-background-radius: 100px;
+}
+.signup-button{
+    -fx-border-color: purple;
+    -fx-border-radius: 100;
+    -fx-background-color: transparent;
+    -fx-font-size: 20px;
+    -fx-font-weight: Bold;
+    -fx-text-fill: black;
+    -fx-background-radius: 100px;
+}
+.login-button:hover{
+    -fx-background-color: #00fff0;
+    -fx-border-radius: 100px;
+    -fx-background-radius: 100px;
+    -fx-cursor: hand;
+}
+.signup-button:hover{
+    -fx-background-color: #00fff0;
+    -fx-border-radius: 100px;
+    -fx-background-radius: 100px;
+    -fx-cursor: hand;
+}
+.menu-bar{
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-border-radius: 0px 0px 10px 10px;
+}
+.DashBoard-Pane{
+    -fx-background-color: transparent;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px 10px 0px 0px;
+}
+.img{
+    -fx-cursor: hand;
+}
+.dateOfBirth{
+    -fx-font-size: 18px;
+}
+.save-button{
+    -fx-border-radius: 100px;
+    -fx-background-radius: 100px;
+    -fx-background-color: #4cff00;
+    -fx-font-size: 20px;
+    -fx-font-weight: Bold;
+    -fx-text-fill: black;
+    -fx-border-color: green;
+}
+.save-button:hover{
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+.save-button:pressed{
+    -fx-rotate: 5px;
+}
+.clear-Button{
+    -fx-border-radius: 100px;
+    -fx-background-radius: 100px;
+    -fx-background-color: #9a9a9a;
+    -fx-font-size: 20px;
+    -fx-font-weight: Bold;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+}
+.clear-Button:hover{
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+.clear-Button:pressed{
+    -fx-rotate: 5px;
+}
+.table-view{
+    -fx-background-color: transparent;
+}
+.table-view:selected{
+    -fx-background-color: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);
+}
+.text-field{
+    -fx-text-fill: black;
+}
+.cmb{
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-font-family: Ubuntu;
+}
+.add-fontawesome:hover{
+    -fx-text-fill:  white;
+}

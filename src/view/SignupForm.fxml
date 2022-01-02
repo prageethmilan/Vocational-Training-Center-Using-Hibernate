@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="signUpFormContext" prefHeight="529.0" prefWidth="419.0" style="-fx-border-color: blue; -fx-border-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignupFormController">
+   <children>
+      <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#backToLoginForm_OnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/60577.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="126.0" layoutY="25.0" text="Signup Form">
+         <font>
+            <Font name="Engebrechtre Bold" size="35.0" />
+         </font>
+      </Label>
+      <Separator layoutX="41.0" layoutY="67.0" prefHeight="0.0" prefWidth="338.0" style="-fx-background-color: black;" />
+      <JFXTextField fx:id="txtFirstName" labelFloat="true" layoutX="67.0" layoutY="103.0" prefHeight="42.0" prefWidth="295.0" promptText="First Name">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtLastName" labelFloat="true" layoutX="67.0" layoutY="167.0" prefHeight="42.0" prefWidth="295.0" promptText="Last Name">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUserName" labelFloat="true" layoutX="67.0" layoutY="235.0" prefHeight="42.0" prefWidth="295.0" promptText="User Name">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutX="67.0" layoutY="303.0" prefHeight="42.0" prefWidth="295.0" promptText="Password">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField fx:id="txtConfirmPassword" labelFloat="true" layoutX="67.0" layoutY="374.0" prefHeight="42.0" prefWidth="295.0" promptText="Confirm Password">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton layoutX="142.0" layoutY="437.0" onMouseClicked="#signUpUser_OnAction" prefHeight="45.0" prefWidth="121.0" styleClass="signup-button" stylesheets="@../assets/styles/Background.css" text="Sign Up" />
+   </children>
+</AnchorPane>

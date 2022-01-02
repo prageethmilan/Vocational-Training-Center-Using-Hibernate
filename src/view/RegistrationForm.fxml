@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="622.0" prefWidth="1270.0" style="-fx-border-color: blue;" styleClass="DashBoard-Pane" stylesheets="@../assets/styles/Background.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrationFormController">
+   <children>
+      <Label layoutX="524.0" layoutY="14.0" text="Registration Form">
+         <font>
+            <Font name="Engebrechtre Bold" size="40.0" />
+         </font>
+      </Label>
+      <Separator layoutX="31.0" layoutY="61.0" prefHeight="0.0" prefWidth="1209.0" style="-fx-background-color: black;" />
+      <JFXComboBox fx:id="cmbStudentId" focusColor="BLACK" labelFloat="true" layoutX="31.0" layoutY="136.0" prefHeight="37.0" prefWidth="167.0" promptText="Student ID" styleClass="cmb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <JFXTextField fx:id="txtName" editable="false" focusColor="BLACK" labelFloat="true" layoutX="228.0" layoutY="136.0" prefHeight="37.0" prefWidth="285.0" promptText="Name" styleClass="text-field" unFocusColor="BLACK">
+         <font>
+            <Font name="Ubuntu" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" editable="false" focusColor="BLACK" labelFloat="true" layoutX="536.0" layoutY="136.0" prefHeight="37.0" prefWidth="440.0" promptText="Address" styleClass="text-field" unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" editable="false" focusColor="BLACK" labelFloat="true" layoutX="1012.0" layoutY="136.0" prefHeight="37.0" prefWidth="228.0" promptText="Contact" styleClass="text-field" unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbProgramId" focusColor="BLACK" labelFloat="true" layoutX="31.0" layoutY="205.0" prefHeight="37.0" prefWidth="167.0" promptText="Program ID" styleClass="cmb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <JFXTextField fx:id="txtProgram" editable="false" focusColor="BLACK" labelFloat="true" layoutX="228.0" layoutY="205.0" prefHeight="37.0" prefWidth="525.0" promptText="Program" styleClass="text-field" unFocusColor="BLACK">
+         <font>
+            <Font name="Ubuntu" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDuration" editable="false" focusColor="BLACK" labelFloat="true" layoutX="788.0" layoutY="205.0" prefHeight="37.0" prefWidth="188.0" promptText="Duration" styleClass="text-field" unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtFee" editable="false" focusColor="BLACK" labelFloat="true" layoutX="1012.0" layoutY="205.0" prefHeight="37.0" prefWidth="228.0" promptText=" Fee (LKR)" styleClass="text-field" unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <HBox layoutX="809.0" layoutY="270.0" prefHeight="48.0" prefWidth="425.0">
+         <children>
+            <JFXButton fx:id="btnAdd" onMouseClicked="#addCourseDetailsToTable" prefHeight="48.0" prefWidth="139.0" styleClass="save-button" text="Add">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+               <graphic>
+                  <FontAwesomeIconView glyphName="PLUS" size="25" styleClass="add-fontawesome" />
+               </graphic>
+            </JFXButton>
+            <JFXButton onMouseClicked="#clearFields_OnAction" prefHeight="48.0" prefWidth="113.0" styleClass="clear-Button" text="Clear">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <TableView fx:id="tblRegistration" layoutX="141.0" layoutY="346.0" prefHeight="202.0" prefWidth="1024.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;">
+        <columns>
+          <TableColumn fx:id="colProgramId" prefWidth="128.0" text="Program ID" />
+          <TableColumn fx:id="colProgram" prefWidth="338.0" text="Program" />
+            <TableColumn fx:id="colDuration" prefWidth="214.0" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="188.0" text="Fee (LKR)" />
+            <TableColumn fx:id="colDelete" prefWidth="154.0" text="Delete" />
+        </columns>
+      </TableView>
+      <Label layoutX="579.0" layoutY="318.0" text="Program Details" underline="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="1026.0" layoutY="559.0" onMouseClicked="#saveRegistration_OnAction" prefHeight="48.0" prefWidth="139.0" styleClass="save-button" text="Save" />
+      <Label layoutX="31.0" layoutY="80.0" text="Reg No :- ">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRegNo" alignment="CENTER_RIGHT" layoutX="126.0" layoutY="80.0" prefHeight="21.0" prefWidth="95.0" text="Reg-001" textFill="RED">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="188.0" layoutY="560.0" text="Total Fee (LKR) :- ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalFee" alignment="CENTER_RIGHT" layoutX="371.0" layoutY="558.0" prefHeight="25.0" prefWidth="147.0" text="300000.00" textFill="RED">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

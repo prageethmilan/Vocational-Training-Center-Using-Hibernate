@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="622.0" prefWidth="1270.0" style="-fx-border-color: blue;" styleClass="DashBoard-Pane" stylesheets="@../assets/styles/Background.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeFormController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="562.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="549.0" layoutY="176.0" text="Sipsewana" textFill="#2f02db" textOverrun="CLIP">
+         <font>
+            <Font name="Klaudia Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="486.0" layoutY="214.0" text="Vocational Training Institute" textFill="#3e2df8" textOverrun="CLIP">
+         <font>
+            <Font name="Klaudia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Pane layoutX="266.0" layoutY="300.0" prefHeight="200.0" prefWidth="220.0" style="-fx-border-color: blue; -fx-border-radius: 10;">
+         <children>
+            <Label alignment="CENTER" layoutX="48.0" layoutY="14.0" prefHeight="42.0" prefWidth="124.0" text="Students" underline="true">
+               <font>
+                  <Font name="Engebrechtre Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblStudentCount" alignment="CENTER" layoutX="7.0" layoutY="56.0" prefHeight="127.0" prefWidth="207.0" text="0" textFill="RED">
+               <font>
+                  <Font size="82.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="789.0" layoutY="300.0" prefHeight="200.0" prefWidth="220.0" style="-fx-border-color: blue; -fx-border-radius: 10;">
+         <children>
+            <Label alignment="CENTER" layoutX="48.0" layoutY="14.0" prefHeight="42.0" prefWidth="124.0" text="Courses" underline="true">
+               <font>
+                  <Font name="Engebrechtre Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCourseCount" alignment="CENTER" layoutX="7.0" layoutY="56.0" prefHeight="127.0" prefWidth="207.0" text="0" textFill="RED">
+               <font>
+                  <Font size="82.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

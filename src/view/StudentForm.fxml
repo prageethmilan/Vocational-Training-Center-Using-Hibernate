@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="622.0" prefWidth="1270.0" style="-fx-border-color: blue;" styleClass="DashBoard-Pane" stylesheets="@../assets/styles/Background.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentFormController">
+   <children>
+      <Label layoutX="531.0" layoutY="14.0" text="Students Form">
+         <font>
+            <Font name="Engebrechtre Bold" size="40.0" />
+         </font>
+      </Label>
+      <Separator layoutX="26.0" layoutY="62.0" prefHeight="0.0" prefWidth="1209.0" style="-fx-background-color: black;" />
+      <Label layoutX="984.0" layoutY="77.0" text="Student ID :- ">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStudentId" alignment="CENTER_RIGHT" layoutX="1143.0" layoutY="75.0" prefHeight="31.0" prefWidth="84.0" text="S-001" textFill="#d30b0b">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtStudentName" focusColor="BLACK" labelFloat="true" layoutX="26.0" layoutY="120.0" prefHeight="34.0" prefWidth="255.0" promptText="Student Name" styleClass="text-field" unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" focusColor="BLACK" labelFloat="true" layoutX="317.0" layoutY="120.0" prefHeight="34.0" prefWidth="533.0" promptText="Address" styleClass="text-field">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" focusColor="BLACK" labelFloat="true" layoutX="893.0" layoutY="120.0" prefHeight="34.0" prefWidth="255.0" promptText="Contact" styleClass="text-field">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXDatePicker fx:id="txtDateOfBirth" defaultColor="BLACK" layoutX="26.0" layoutY="193.0" prefHeight="34.0" prefWidth="255.0" promptText="Date Of Birth" styleClass="dateOfBirth" />
+      <JFXTextField fx:id="txtAge" focusColor="BLACK" labelFloat="true" layoutX="317.0" layoutY="193.0" prefHeight="34.0" prefWidth="192.0" promptText="Age" styleClass="text-field">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <HBox layoutX="740.0" layoutY="186.0" prefHeight="48.0" prefWidth="362.0">
+         <children>
+            <JFXButton fx:id="btnSaveAndUpdate" onMouseClicked="#saveAndUpdateStudent_OnAction" prefHeight="48.0" prefWidth="139.0" styleClass="save-button" text="Save">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton onMouseClicked="#clearTextFields_OnAction" prefHeight="48.0" prefWidth="113.0" styleClass="clear-Button" text="Clear">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <TableView fx:id="tblStudents" layoutX="94.0" layoutY="322.0" prefHeight="257.0" prefWidth="1073.0" style="-fx-border-radius: 10; -fx-border-color: black;">
+        <columns>
+          <TableColumn fx:id="colStudentId" prefWidth="108.0" text="Student ID" />
+          <TableColumn fx:id="colName" prefWidth="224.00003051757812" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="314.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="177.0" text="Contact" />
+            <TableColumn fx:id="colDateOfBirth" prefWidth="150.0" text="Date Of Birth" />
+            <TableColumn fx:id="colAge" prefWidth="98.0" text="Age" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#updateStudent_OnAction" text="Update" />
+                  <MenuItem mnemonicParsing="false" onAction="#deleteStudent_OnAction" text="Delete" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <JFXTextField fx:id="txtSearchId" layoutX="100.0" layoutY="277.0" prefHeight="28.0" prefWidth="224.0" promptText="Search Student  ID" styleClass="text-field">
+         <font>
+            <Font size="16.0" />
+         </font></JFXTextField>
+   </children>
+</AnchorPane>

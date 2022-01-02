@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="622.0" prefWidth="1270.0" style="-fx-border-color: blue;" styleClass="DashBoard-Pane" stylesheets="@../assets/styles/Background.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CoursesFormController">
+   <children>
+      <Label layoutX="543.0" layoutY="14.0" text="Courses Form">
+         <font>
+            <Font name="Engebrechtre Bold" size="40.0" />
+         </font>
+      </Label>
+      <Separator layoutX="37.0" layoutY="62.0" prefHeight="0.0" prefWidth="1209.0" style="-fx-background-color: black;" />
+      <JFXTextField fx:id="txtProgramId" focusColor="BLACK" labelFloat="true" layoutX="37.0" layoutY="109.0" prefHeight="37.0" prefWidth="227.0" promptText="Program ID" styleClass="text-field" unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtProgram" focusColor="BLACK" labelFloat="true" layoutX="294.0" layoutY="109.0" prefHeight="37.0" prefWidth="354.0" promptText="Program" styleClass="text-field" unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDuration" focusColor="BLACK" labelFloat="true" layoutX="677.0" layoutY="109.0" prefHeight="37.0" prefWidth="112.0" promptText="Duration" styleClass="text-field" unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Spinner fx:id="spTime" layoutX="789.0" layoutY="109.0" prefHeight="37.0" prefWidth="125.0" style="-fx-border-color: black;" />
+      <JFXTextField fx:id="txtFee" focusColor="BLACK" labelFloat="true" layoutX="966.0" layoutY="109.0" prefHeight="37.0" prefWidth="180.0" promptText=" Fee (LKR)" styleClass="text-field" unFocusColor="BLACK">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <HBox layoutX="784.0" layoutY="186.0" prefHeight="48.0" prefWidth="362.0">
+         <children>
+            <JFXButton fx:id="btnSaveAndUpdate" onMouseClicked="#saveAndUpdateCourseDetails_OnAction" prefHeight="48.0" prefWidth="139.0" styleClass="save-button" text="Save">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton onMouseClicked="#clearTextFields_OnAction" prefHeight="48.0" prefWidth="113.0" styleClass="clear-Button" text="Clear">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <TableView fx:id="tblPrograms" layoutX="262.0" layoutY="264.0" prefHeight="284.0" prefWidth="758.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;">
+        <columns>
+          <TableColumn fx:id="colProgramId" prefWidth="125.99996948242188" text="Program ID" />
+          <TableColumn fx:id="colProgram" prefWidth="299.0" text="Program" />
+            <TableColumn fx:id="colDuration" prefWidth="170.0" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="160.0" text="Fee(LKR)" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#deleteCourseOnAction" text="Delete" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </children>
+</AnchorPane>
