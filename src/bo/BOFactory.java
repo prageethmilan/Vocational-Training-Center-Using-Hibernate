@@ -6,15 +6,14 @@ public class BOFactory {
     private static BOFactory boFactory;
 
     private BOFactory() {
-
     }
 
     public static BOFactory getBoFactory() {
         return (boFactory == null) ? boFactory = new BOFactory() : boFactory;
     }
 
-    public <T extends SuperBO> T getBO(BOTypes boTypes){
-        switch (boTypes){
+    public <T extends SuperBO> T getBO(BOTypes boTypes) {
+        switch (boTypes) {
             case USERSIGNUP:
                 return (T) new SignUpFormBOImpl();
             case USERLOGIN:
@@ -36,7 +35,8 @@ public class BOFactory {
         }
 
     }
-    public enum BOTypes{
-        USERSIGNUP,USERLOGIN,STUDENT,DASHBOARD,HOME,COURSE,REGISTRATION,REGISTRATIONLIST
+
+    public enum BOTypes {
+        USERSIGNUP, USERLOGIN, STUDENT, DASHBOARD, HOME, COURSE, REGISTRATION, REGISTRATIONLIST
     }
 }

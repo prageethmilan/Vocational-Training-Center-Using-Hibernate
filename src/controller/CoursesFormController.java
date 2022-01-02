@@ -44,10 +44,10 @@ public class CoursesFormController {
         }
     }
 
-    private void loadCoursesToTable(ArrayList<CourseDTO> allCourses){
+    private void loadCoursesToTable(ArrayList<CourseDTO> allCourses) {
         ObservableList<CourseTM> obList = FXCollections.observableArrayList();
-        allCourses.forEach(e->{
-            obList.add(new CourseTM(e.getProgramId(),e.getProgram(),e.getDuration(),e.getFee()));
+        allCourses.forEach(e -> {
+            obList.add(new CourseTM(e.getProgramId(), e.getProgram(), e.getDuration(), e.getFee()));
         });
         tblPrograms.setItems(obList);
         iniColumns();
@@ -91,16 +91,16 @@ public class CoursesFormController {
 
         try {
             boolean added = coursesFormBO.saveCourse(courseDTO);
-            if (added){
-                new Alert(Alert.AlertType.CONFIRMATION,"Saved Successfully",ButtonType.OK).show();
+            if (added) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Saved Successfully", ButtonType.OK).show();
                 txtProgramId.clear();
                 txtProgram.clear();
                 txtDuration.clear();
                 txtFee.clear();
                 spTime.getValueFactory().setValue("Years");
                 loadCoursesToTable(coursesFormBO.getAllCourses());
-            }else{
-                new Alert(Alert.AlertType.WARNING,"Try Again",ButtonType.CLOSE).show();
+            } else {
+                new Alert(Alert.AlertType.WARNING, "Try Again", ButtonType.CLOSE).show();
             }
         } catch (Exception e) {
 
@@ -112,22 +112,22 @@ public class CoursesFormController {
         if (selectedItem != null) {
             ButtonType yes = new ButtonType("Yes", ButtonBar.ButtonData.OK_DONE);
             ButtonType no = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Are you sure?",no,yes);
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure?", no, yes);
             alert.setTitle("Confirmation Alert");
             Optional<ButtonType> result = alert.showAndWait();
             if (result.orElse(no) == yes) {
                 try {
                     boolean deleted = coursesFormBO.deleteCourse(selectedItem);
-                    if (deleted){
-                        new Alert(Alert.AlertType.CONFIRMATION,"Deleted Successfully",ButtonType.OK).close();
+                    if (deleted) {
+                        new Alert(Alert.AlertType.CONFIRMATION, "Deleted Successfully", ButtonType.OK).close();
                         loadCoursesToTable(coursesFormBO.getAllCourses());
                     }
                 } catch (Exception e) {
 
                 }
             }
-        }else{
-            new Alert(Alert.AlertType.WARNING,"PLease select a course",ButtonType.CLOSE).show();
+        } else {
+            new Alert(Alert.AlertType.WARNING, "PLease select a course", ButtonType.CLOSE).show();
         }
     }
 }
